@@ -6,7 +6,36 @@ Public Class Form1
     '- zapis do logu wykonanych kroków
     '- 
     '2) Skopiowanie wszystkiego z podanej lokalizacji
+    Private rStatus As Integer = 0, rKomunikat As String = ""
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim FromPath As String = "\\PIJT-CGCSNN2\test$\ja"
+        Dim ToPath As String = "C:\Users\stav\Pictures\test"
+        Dim Username As String = "TECHNOKABEL\JTruminski", Password As String = "Jana84ik"
+        SaveToLog("FromPath: " + FromPath.ToString)
+        SaveToLog("ToPath: " + ToPath.ToString)
+        SaveToLog("sername: " + Username.ToString)
+        SaveToLog("Password: " + Len(Password).ToString)
+
+        Dim Network As String = ""
+        If Mid(FromPath, 1, 2) = "\\" Then
+            Network = FromPath
+        ElseIf Mid(ToPath, 1, 2) = "\\" Then
+            Network = ToPath
+        End If
+        SaveToLog("Network: " + Network.ToString)
+        If Network <> "" Then
+            Dim Letter As String = ""
+            MapDrive(UNCPath:=Network, Username:=Username, Password:=Password, rStatus:=rStatus, rKomunikat:=rKomunikat, rDriveLetter:=Letter)
+            If rStatus = 1 Then
+                SaveToLog("Zamapowano pod: " + Letter.ToString + " " + If(rKomunikat, ""))
+                Dim DriveLetter As String = Letter + ":\"
+
+            Else
+                SaveToLog("Błąd podczas mapowania: " + If(rKomunikat, ""))
+            End If
+        Else
+            SaveToLog("Brak informacji o udziale.")
+        End If
 
     End Sub
     Public Sub SaveToLog(ByVal Text As String)
@@ -28,32 +57,39 @@ Public Class Form1
         Me.TextBox1.Text = If(Me.TextBox1.Text = String.Empty, line, Me.TextBox1.Text & ControlChars.CrLf & line)
     End Sub
     Public Function CopyDirectory(ByVal SrcPath As String, ByVal DestPath As String, Optional ByVal bQuiet As Boolean = False) As Boolean
-        If Not System.IO.Directory.Exists(SrcPath) Then
-            Throw New System.IO.DirectoryNotFoundException("The directory " & SrcPath & " does not exists")
+        If Not Directory.Exists(SrcPath) Then
+            SaveToLog("The directory " & SrcPath & " does not exists")
+            'Throw New System.IO.DirectoryNotFoundException("The directory " & SrcPath & " does not exists")
         End If
-        If System.IO.Directory.Exists(DestPath) AndAlso Not bQuiet Then
-            If MessageBox.Show("directory " & DestPath & " already exists." & vbCrLf &
-            "If you continue, any files with the same name will be overwritten",
-            "Continue?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
-            MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Cancel Then Exit Function
+        If Directory.Exists(DestPath) AndAlso Not bQuiet Then
+            SaveToLog("directory " & DestPath & " already exists." & vbCrLf &
+            "If you continue, any files with the same name will be overwritten.")
+            'If MessageBox.Show("directory " & DestPath & " already exists." & vbCrLf &
+            '"If you continue, any files with the same name will be overwritten",
+            '"Continue?", MessageBoxButtons.OKCancel, MessageBoxIcon.Question,
+            'MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Cancel Then Exit Function
         End If
 
         'add Directory Seperator Character (\) for the string concatenation shown later
-        If DestPath.Substring(DestPath.Length - 1, 1) <> System.IO.Path.DirectorySeparatorChar Then
-            DestPath += System.IO.Path.DirectorySeparatorChar
+        If DestPath.Substring(DestPath.Length - 1, 1) <> Path.DirectorySeparatorChar Then
+            DestPath += Path.DirectorySeparatorChar
         End If
-        If Not System.IO.Directory.Exists(DestPath) Then System.IO.Directory.CreateDirectory(DestPath)
+        If Not Directory.Exists(DestPath) Then
+            Directory.CreateDirectory(DestPath)
+            SaveToLog("Utworzono folder: " & DestPath)
+        End If
         Dim Files As String()
-        Files = System.IO.Directory.GetFileSystemEntries(SrcPath)
+        Files = Directory.GetFileSystemEntries(SrcPath)
         Dim element As String
         For Each element In Files
-            If System.IO.Directory.Exists(element) Then
+            If Directory.Exists(element) Then
                 'if the current FileSystemEntry is a directory,
                 'call this function recursively
                 CopyDirectory(element, DestPath & System.IO.Path.GetFileName(element), True)
             Else
                 'the current FileSystemEntry is a file so just copy it
-                System.IO.File.Copy(element, DestPath & System.IO.Path.GetFileName(element), True)
+                File.Copy(element, DestPath & System.IO.Path.GetFileName(element), True)
+                SaveToLog(element + "-->" & DestPath & System.IO.Path.GetFileName(element))
             End If
         Next
         Return True
