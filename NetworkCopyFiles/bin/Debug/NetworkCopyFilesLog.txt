@@ -1,0 +1,135 @@
+yyyy-MM-dd HH:mm:ss FromPath: \\PIJT-CGCSNN2\test$\ja
+yyyy-MM-dd HH:mm:ss FromPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 14:56:18 2021-02-17 14:56:18 yyyy-MM-dd HH:mm:ss FromPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 14:57:24 ToPath: C:\Users\stav\Pictures\test
+2021-02-17 14:57:32 sername: TECHNOKABEL\JTruminski
+2021-02-17 14:57:41 Password: 8
+2021-02-17 14:58:31 Network: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:01:11 Zamapowano pod: G 
+2021-02-17 15:03:52 \\PIJT-CGCSNN2\test$\ja\142673281_324786398855527_3135331544637615637_n.jpg-->C:\Users\stav\Pictures\test\142673281_324786398855527_3135331544637615637_n.jpg
+2021-02-17 15:03:53 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty (1).pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty (1).pdf
+2021-02-17 15:03:53 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty.pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty.pdf
+2021-02-17 15:03:53 \\PIJT-CGCSNN2\test$\ja\drukwplaty.pdf-->C:\Users\stav\Pictures\test\drukwplaty.pdf
+2021-02-17 15:03:53 \\PIJT-CGCSNN2\test$\ja\odpis_aktualny_105985_1611906244103.pdf-->C:\Users\stav\Pictures\test\odpis_aktualny_105985_1611906244103.pdf
+2021-02-17 15:03:53 \\PIJT-CGCSNN2\test$\ja\odpis_pelny_105985_1611906248632.pdf-->C:\Users\stav\Pictures\test\odpis_pelny_105985_1611906248632.pdf
+2021-02-17 15:03:53 \\PIJT-CGCSNN2\test$\ja\Polisa  (17).pdf-->C:\Users\stav\Pictures\test\Polisa  (17).pdf
+2021-02-17 15:03:53 \\PIJT-CGCSNN2\test$\ja\Polisa17.pdf-->C:\Users\stav\Pictures\test\Polisa17.pdf
+2021-02-17 15:03:53 Odmapowano: 
+2021-02-17 15:07:59 FromPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:07:59 ToPath: C:\Users\stav\Pictures\test
+2021-02-17 15:07:59 Username: TECHNOKABEL\JTruminski
+2021-02-17 15:07:59 Password: 8
+2021-02-17 15:07:59 Network: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:08:03 Zamapowano pod: G 
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\142673281_324786398855527_3135331544637615637_n.jpg-->C:\Users\stav\Pictures\test\142673281_324786398855527_3135331544637615637_n.jpg
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty (1).pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty (1).pdf
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty.pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty.pdf
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\drukwplaty.pdf-->C:\Users\stav\Pictures\test\drukwplaty.pdf
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\odpis_aktualny_105985_1611906244103.pdf-->C:\Users\stav\Pictures\test\odpis_aktualny_105985_1611906244103.pdf
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\odpis_pelny_105985_1611906248632.pdf-->C:\Users\stav\Pictures\test\odpis_pelny_105985_1611906248632.pdf
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\Polisa  (17).pdf-->C:\Users\stav\Pictures\test\Polisa  (17).pdf
+2021-02-17 15:08:03 \\PIJT-CGCSNN2\test$\ja\Polisa17.pdf-->C:\Users\stav\Pictures\test\Polisa17.pdf
+2021-02-17 15:08:03 Błąd podczas kopiowania pliku
+2021-02-17 15:08:03 Odmapowano: 
+2021-02-17 15:09:44 FromPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:09:44 ToPath: C:\Users\stav\Pictures\test
+2021-02-17 15:09:44 Username: TECHNOKABEL\JTruminski
+2021-02-17 15:09:44 Password: 8
+2021-02-17 15:09:44 Network: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:09:44 Zamapowano pod: G 
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\142673281_324786398855527_3135331544637615637_n.jpg-->C:\Users\stav\Pictures\test\142673281_324786398855527_3135331544637615637_n.jpg
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty (1).pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty (1).pdf
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty.pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty.pdf
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\drukwplaty.pdf-->C:\Users\stav\Pictures\test\drukwplaty.pdf
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\odpis_aktualny_105985_1611906244103.pdf-->C:\Users\stav\Pictures\test\odpis_aktualny_105985_1611906244103.pdf
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\odpis_pelny_105985_1611906248632.pdf-->C:\Users\stav\Pictures\test\odpis_pelny_105985_1611906248632.pdf
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\Polisa  (17).pdf-->C:\Users\stav\Pictures\test\Polisa  (17).pdf
+2021-02-17 15:09:44 \\PIJT-CGCSNN2\test$\ja\Polisa17.pdf-->C:\Users\stav\Pictures\test\Polisa17.pdf
+2021-02-17 15:09:44 Skopiowano
+2021-02-17 15:09:44 Odmapowano: 
+2021-02-17 15:11:30 FromPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:11:30 ToPath: C:\Users\stav\Pictures\test
+2021-02-17 15:11:30 Username: TECHNOKABEL\JTruminski
+2021-02-17 15:11:30 Password: 8
+2021-02-17 15:11:30 Network: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:11:34 Zamapowano pod: G 
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\142673281_324786398855527_3135331544637615637_n.jpg-->C:\Users\stav\Pictures\test\142673281_324786398855527_3135331544637615637_n.jpg
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty (1).pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty (1).pdf
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty.pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty.pdf
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\drukwplaty.pdf-->C:\Users\stav\Pictures\test\drukwplaty.pdf
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\odpis_aktualny_105985_1611906244103.pdf-->C:\Users\stav\Pictures\test\odpis_aktualny_105985_1611906244103.pdf
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\odpis_pelny_105985_1611906248632.pdf-->C:\Users\stav\Pictures\test\odpis_pelny_105985_1611906248632.pdf
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\Polisa  (17).pdf-->C:\Users\stav\Pictures\test\Polisa  (17).pdf
+2021-02-17 15:11:34 \\PIJT-CGCSNN2\test$\ja\Polisa17.pdf-->C:\Users\stav\Pictures\test\Polisa17.pdf
+2021-02-17 15:11:34 Skopiowano
+2021-02-17 15:11:34 Odmapowano: 
+2021-02-17 15:21:00 Start
+2021-02-17 15:21:00 FromPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:21:00 ToPath: C:\Users\stav\Pictures\test
+2021-02-17 15:21:00 Username: TECHNOKABEL\JTruminski
+2021-02-17 15:21:00 Password: 8
+2021-02-17 15:21:00 Network: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:21:04 Zamapowano pod: G 
+2021-02-17 15:21:04 \\PIJT-CGCSNN2\test$\ja\142673281_324786398855527_3135331544637615637_n.jpg-->C:\Users\stav\Pictures\test\142673281_324786398855527_3135331544637615637_n.jpg
+2021-02-17 15:21:04 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty (1).pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty (1).pdf
+2021-02-17 15:21:04 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty.pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty.pdf
+2021-02-17 15:21:04 \\PIJT-CGCSNN2\test$\ja\drukwplaty.pdf-->C:\Users\stav\Pictures\test\drukwplaty.pdf
+2021-02-17 15:21:05 \\PIJT-CGCSNN2\test$\ja\odpis_aktualny_105985_1611906244103.pdf-->C:\Users\stav\Pictures\test\odpis_aktualny_105985_1611906244103.pdf
+2021-02-17 15:21:05 \\PIJT-CGCSNN2\test$\ja\odpis_pelny_105985_1611906248632.pdf-->C:\Users\stav\Pictures\test\odpis_pelny_105985_1611906248632.pdf
+2021-02-17 15:21:05 \\PIJT-CGCSNN2\test$\ja\Polisa  (17).pdf-->C:\Users\stav\Pictures\test\Polisa  (17).pdf
+2021-02-17 15:21:05 \\PIJT-CGCSNN2\test$\ja\Polisa17.pdf-->C:\Users\stav\Pictures\test\Polisa17.pdf
+2021-02-17 15:21:05 Skopiowano
+2021-02-17 15:21:05 Odmapowano: G:\ 
+2021-02-17 15:21:05 Koniec
+2021-02-17 15:22:30 Start
+2021-02-17 15:22:30 FromPath: C:\Users\stav\Pictures\test
+2021-02-17 15:22:30 ToPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:22:30 Username: TECHNOKABEL\JTruminski
+2021-02-17 15:22:30 Password: 8
+2021-02-17 15:22:30 Network: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:22:30 Zamapowano pod: G 
+2021-02-17 15:22:30 C:\Users\stav\Pictures\test\142673281_324786398855527_3135331544637615637_n.jpg-->\\PIJT-CGCSNN2\test$\ja\142673281_324786398855527_3135331544637615637_n.jpg
+2021-02-17 15:22:30 C:\Users\stav\Pictures\test\druk-przelewu-wplaty (1).pdf-->\\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty (1).pdf
+2021-02-17 15:22:30 C:\Users\stav\Pictures\test\druk-przelewu-wplaty.pdf-->\\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty.pdf
+2021-02-17 15:22:30 C:\Users\stav\Pictures\test\drukwplaty.pdf-->\\PIJT-CGCSNN2\test$\ja\drukwplaty.pdf
+2021-02-17 15:22:30 C:\Users\stav\Pictures\test\odpis_aktualny_105985_1611906244103.pdf-->\\PIJT-CGCSNN2\test$\ja\odpis_aktualny_105985_1611906244103.pdf
+2021-02-17 15:22:30 C:\Users\stav\Pictures\test\odpis_pelny_105985_1611906248632.pdf-->\\PIJT-CGCSNN2\test$\ja\odpis_pelny_105985_1611906248632.pdf
+2021-02-17 15:22:31 C:\Users\stav\Pictures\test\Polisa  (17).pdf-->\\PIJT-CGCSNN2\test$\ja\Polisa  (17).pdf
+2021-02-17 15:22:31 C:\Users\stav\Pictures\test\Polisa17.pdf-->\\PIJT-CGCSNN2\test$\ja\Polisa17.pdf
+2021-02-17 15:22:31 Zakończono kopiowanie.
+2021-02-17 15:22:31 Odmapowano: G:\ 
+2021-02-17 15:22:31 Koniec
+2021-02-17 15:26:11 Start
+2021-02-17 15:26:11 Brak informacji o argumentach.
+2021-02-17 15:26:11 Koniec
+2021-02-17 15:30:09 Start
+2021-02-17 15:30:09 Brak informacji o argumentach. \\SERWER\udzial C:\Users\stav\Pictures\test DOMAIN\User Password lub C:\Users\stav\Pictures\test \\SERWER\udzial DOMAIN\User Password
+2021-02-17 15:30:09 Koniec
+2021-02-17 15:31:47 Start
+2021-02-17 15:31:47 Brak informacji o argumentach. Wartości argumentów:
+ \\SERWER\udzial C:\Users\stav\Pictures\test DOMAIN\User Password 
+ C:\Users\stav\Pictures\test \\SERWER\udzial DOMAIN\User Password
+2021-02-17 15:31:47 Koniec
+2021-02-17 15:32:21 Start
+2021-02-17 15:32:21 Brak informacji o argumentach. Wartości argumentów:
+\\SERWER\udzial C:\Users\stav\Pictures\test DOMAIN\User Password 
+C:\Users\stav\Pictures\test \\SERWER\udzial DOMAIN\User Password
+2021-02-17 15:32:21 Koniec
+2021-02-17 15:37:41 Start
+2021-02-17 15:37:41 FromPath: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:37:41 ToPath: C:\Users\stav\Pictures\test
+2021-02-17 15:37:41 Username: TECHNOKABEL\JTruminski
+2021-02-17 15:37:41 Password: 8
+2021-02-17 15:37:41 Network: \\PIJT-CGCSNN2\test$\ja
+2021-02-17 15:37:45 Zamapowano pod: G 
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\142673281_324786398855527_3135331544637615637_n.jpg-->C:\Users\stav\Pictures\test\142673281_324786398855527_3135331544637615637_n.jpg
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty (1).pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty (1).pdf
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\druk-przelewu-wplaty.pdf-->C:\Users\stav\Pictures\test\druk-przelewu-wplaty.pdf
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\drukwplaty.pdf-->C:\Users\stav\Pictures\test\drukwplaty.pdf
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\odpis_aktualny_105985_1611906244103.pdf-->C:\Users\stav\Pictures\test\odpis_aktualny_105985_1611906244103.pdf
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\odpis_pelny_105985_1611906248632.pdf-->C:\Users\stav\Pictures\test\odpis_pelny_105985_1611906248632.pdf
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\Polisa  (17).pdf-->C:\Users\stav\Pictures\test\Polisa  (17).pdf
+2021-02-17 15:37:45 \\PIJT-CGCSNN2\test$\ja\Polisa17.pdf-->C:\Users\stav\Pictures\test\Polisa17.pdf
+2021-02-17 15:37:45 Zakończono kopiowanie.
+2021-02-17 15:37:45 Odmapowano: G:\ 
+2021-02-17 15:37:45 Koniec

@@ -1,62 +1,88 @@
 ﻿Imports System.IO
-Imports System.Security
 Imports System.Runtime.InteropServices
 Public Class Form1
-    '1) Zamapowanie pierwszej wolnej literki
-    '- zapis do logu wykonanych kroków
-    '- 
-    '2) Skopiowanie wszystkiego z podanej lokalizacji
     Private rStatus As Integer = 0, rKomunikat As String = ""
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Dim FromPath As String = "\\PIJT-CGCSNN2\test$\ja"
-        Dim ToPath As String = "C:\Users\stav\Pictures\test"
-        Dim Username As String = "TECHNOKABEL\JTruminski", Password As String = "Jana84ik"
-        SaveToLog("FromPath: " + FromPath.ToString)
-        SaveToLog("ToPath: " + ToPath.ToString)
-        SaveToLog("sername: " + Username.ToString)
-        SaveToLog("Password: " + Len(Password).ToString)
+        SaveToLog("Start")
+        Try
+            Dim Arguments As String() = Environment.GetCommandLineArgs
+            If Arguments.Count > 1 Then
+                'Dim FromPath As String = "C:\Users\stav\Pictures\test"
+                'Dim ToPath As String = "\\PIJT-CGCSNN2\test$\ja"
+                'Dim Username As String = "TECHNOKABEL\JTruminski", Password As String = "Jana84ik"
+                Dim FromPath As String = Arguments(1).ToString
+                Dim ToPath As String = Arguments(2).ToString
+                Dim Username As String = Arguments(3).ToString
+                Dim Password As String = Arguments(4).ToString
 
-        Dim Network As String = ""
-        If Mid(FromPath, 1, 2) = "\\" Then
-            Network = FromPath
-        ElseIf Mid(ToPath, 1, 2) = "\\" Then
-            Network = ToPath
-        End If
-        SaveToLog("Network: " + Network.ToString)
-        If Network <> "" Then
-            Dim Letter As String = ""
-            MapDrive(UNCPath:=Network, Username:=Username, Password:=Password, rStatus:=rStatus, rKomunikat:=rKomunikat, rDriveLetter:=Letter)
-            If rStatus = 1 Then
-                SaveToLog("Zamapowano pod: " + Letter.ToString + " " + If(rKomunikat, ""))
-                Dim DriveLetter As String = Letter + ":\"
+                SaveToLog("FromPath: " + FromPath.ToString)
+                SaveToLog("ToPath: " + ToPath.ToString)
+                SaveToLog("Username: " + Username.ToString)
+                SaveToLog("Password: " + Len(Password).ToString)
 
+                Dim Network As String = ""
+                If Mid(FromPath, 1, 2) = "\\" Then
+                    Network = FromPath
+                ElseIf Mid(ToPath, 1, 2) = "\\" Then
+                    Network = ToPath
+                End If
+                SaveToLog("Network: " + Network.ToString)
+                If Network <> "" Then
+                    Dim Letter As String = ""
+                    MapDrive(UNCPath:=Network, Username:=Username, Password:=Password, rStatus:=rStatus, rKomunikat:=rKomunikat, rDriveLetter:=Letter)
+                    If rStatus = 1 Then
+                        SaveToLog("Zamapowano pod: " + Letter.ToString + " " + If(rKomunikat, ""))
+                        Dim DriveLetter As String = Letter + ":\"
+
+                        If CopyDirectory(SrcPath:=FromPath, DestPath:=ToPath, bQuiet:=1) = True Then
+                            SaveToLog("Zakończono kopiowanie.")
+                        Else
+                            SaveToLog("Błąd podczas kopiowania pliku")
+                        End If
+
+                        UnMapDrive(Letter, rStatus:=rStatus, rKomunikat:=rKomunikat)
+                        If rStatus = 1 Then
+                            SaveToLog("Odmapowano: " + DriveLetter + " " + If(rKomunikat, ""))
+                        Else
+                            SaveToLog("Błąd podczas odłączania: " + If(rKomunikat, ""))
+                        End If
+                    Else
+                        SaveToLog("Błąd podczas mapowania: " + If(rKomunikat, ""))
+                    End If
+                    Me.Close()
+                Else
+                    SaveToLog("Brak informacji o udziale.")
+                End If
             Else
-                SaveToLog("Błąd podczas mapowania: " + If(rKomunikat, ""))
+                SaveToLog("Brak informacji o argumentach. Wartości argumentów:" & ControlChars.CrLf & "\\SERWER\udzial C:\Users\stav\Pictures\test DOMAIN\User Password " & ControlChars.CrLf & "C:\Users\stav\Pictures\test \\SERWER\udzial DOMAIN\User Password")
             End If
-        Else
-            SaveToLog("Brak informacji o udziale.")
-        End If
-
+        Catch ex As Exception
+            SaveToLog("Exception. " + ex.Message.ToString)
+        End Try
+        SaveToLog("Koniec")
     End Sub
-    Public Sub SaveToLog(ByVal Text As String)
+    Private Sub SaveToLog(ByVal Text As String)
         Dim path As String = "NetworkCopyFilesLog.txt"
-        Dim Data As String = String.Format("yyyy-MM-dd HH:mm:ss", DateTime.Now)
+        Dim Data As String = Date.Now()
         Text = Data + " " + Text
+
         If Not File.Exists(path) Then
             Using sw As StreamWriter = File.CreateText(path)
                 sw.WriteLine(Text.ToString)
             End Using
+        Else
+            Using sw As StreamWriter = File.AppendText(path)
+                sw.WriteLine(Text.ToString)
+            End Using
         End If
 
-        Using sw As StreamWriter = File.AppendText(path)
-            sw.WriteLine(Text.ToString)
-        End Using
         AddLine(Text)
+
     End Sub
     Private Sub AddLine(ByVal line As String)
         Me.TextBox1.Text = If(Me.TextBox1.Text = String.Empty, line, Me.TextBox1.Text & ControlChars.CrLf & line)
     End Sub
-    Public Function CopyDirectory(ByVal SrcPath As String, ByVal DestPath As String, Optional ByVal bQuiet As Boolean = False) As Boolean
+    Private Function CopyDirectory(ByVal SrcPath As String, ByVal DestPath As String, Optional ByVal bQuiet As Boolean = False) As Boolean
         If Not Directory.Exists(SrcPath) Then
             SaveToLog("The directory " & SrcPath & " does not exists")
             'Throw New System.IO.DirectoryNotFoundException("The directory " & SrcPath & " does not exists")
@@ -85,17 +111,17 @@ Public Class Form1
             If Directory.Exists(element) Then
                 'if the current FileSystemEntry is a directory,
                 'call this function recursively
-                CopyDirectory(element, DestPath & System.IO.Path.GetFileName(element), True)
+                CopyDirectory(element, DestPath & Path.GetFileName(element), True)
             Else
                 'the current FileSystemEntry is a file so just copy it
-                File.Copy(element, DestPath & System.IO.Path.GetFileName(element), True)
-                SaveToLog(element + "-->" & DestPath & System.IO.Path.GetFileName(element))
+                File.Copy(element, DestPath & Path.GetFileName(element), True)
+                SaveToLog(element + "-->" & DestPath & Path.GetFileName(element))
             End If
         Next
         Return True
     End Function
 
-    Public Declare Function WNetAddConnection2 _
+    Private Declare Function WNetAddConnection2 _
         Lib "mpr.dll" Alias "WNetAddConnection2A" _
         (
             ByRef lpNetResource As NETRESOURCE,
@@ -103,7 +129,7 @@ Public Class Form1
             ByVal lpUserName As String,
             ByVal dwFlags As Integer) As Integer
 
-    Public Declare Function WNetCancelConnection2 _
+    Private Declare Function WNetCancelConnection2 _
         Lib "mpr" Alias "WNetCancelConnection2A" _
         (
             ByVal lpName As String,
@@ -111,7 +137,7 @@ Public Class Form1
             ByVal fForce As Integer) As Integer
 
     <StructLayout(LayoutKind.Sequential)>
-    Public Structure NETRESOURCE
+    Private Structure NETRESOURCE
         Public dwScope As Integer
         Public dwType As Integer
         Public dwDisplayType As Integer
@@ -121,9 +147,9 @@ Public Class Form1
         Public lpComment As String
         Public lpProvider As String
     End Structure
-    Public Const ForceDisconnect As Integer = 1
-    Public Const RESOURCETYPE_DISK As Long = &H1
-    Public Sub MapDrive(
+    Private Const ForceDisconnect As Integer = 1
+    Private Const RESOURCETYPE_DISK As Long = &H1
+    Private Sub MapDrive(
                        ByVal UNCPath As String, ByVal Username As String, ByVal Password As String _
                        , ByRef rStatus As Integer, ByRef rKomunikat As String, ByRef rDriveLetter As String
                       )
@@ -132,7 +158,7 @@ Public Class Form1
             rKomunikat = ""
             rDriveLetter = ""
 
-            Dim LetterAscii As Integer = 69 '69=E
+            Dim LetterAscii As Integer = 67 '67=C
             Dim Letter As String = Chr(LetterAscii)
 
             Dim nr As NETRESOURCE
@@ -172,7 +198,7 @@ Public Class Form1
         End Try
     End Sub
 
-    Public Sub UnMapDrive(ByVal DriveLetter As String, ByRef rStatus As Integer, ByRef rKomunikat As String)
+    Private Sub UnMapDrive(ByVal DriveLetter As String, ByRef rStatus As Integer, ByRef rKomunikat As String)
         Dim rc As Integer
         rc = WNetCancelConnection2(DriveLetter & ":", 0, ForceDisconnect)
         If rc = 0 Then
