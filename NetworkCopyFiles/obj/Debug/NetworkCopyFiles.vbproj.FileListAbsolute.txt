@@ -1,0 +1,12 @@
+C:\Users\stav\Projekty\NetworkCopyFiles\bin\Debug\NetworkCopyFiles.exe.config
+C:\Users\stav\Projekty\NetworkCopyFiles\bin\Debug\NetworkCopyFiles.exe
+C:\Users\stav\Projekty\NetworkCopyFiles\bin\Debug\NetworkCopyFiles.pdb
+C:\Users\stav\Projekty\NetworkCopyFiles\bin\Debug\NetworkCopyFiles.xml
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.vbprojAssemblyReference.cache
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.Form1.resources
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.Resources.resources
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.vbproj.GenerateResource.cache
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.vbproj.CoreCompileInputs.cache
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.exe
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.xml
+C:\Users\stav\Projekty\NetworkCopyFiles\obj\Debug\NetworkCopyFiles.pdb
